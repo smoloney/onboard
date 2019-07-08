@@ -28,7 +28,6 @@ OPSPACKAGES=(
     gnu-indent
     gnu-sed
     gnu-tar
-    gnutils
     grep
     gzip
     watch
@@ -70,7 +69,7 @@ brew tap homebrew/dupes
 brew_install OPSPACKAGES
 brew_install UPDATE
 
-
+export PATH="/usr/local/opt/make/libexec/gnubin:/usr/local/opt/grep/libexec/gnubin:/usr/local/opt/gnu-tar/libexec/gnubin:/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/opt/gnu-indent/libexec/gnubin:/usr/local/opt/ed/libexec/gnubin:/usr/local/opt/ruby/bin:/usr/local/opt/coretils/libexec/gnubin:$PATH"
 cp /jarConfig/files/*policy.jar  /jarConfig/files/java.security $HOME/jre/lib/security
 cp /jarConfig/files/bcprov-jdk15on-160.jar $HOME/jre/lib/ext
 
@@ -82,6 +81,3 @@ rm -rf jarConfig
 
 
 exit 0
-
-
-
