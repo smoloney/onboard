@@ -69,11 +69,11 @@ brew tap homebrew/dupes
 brew_install OPSPACKAGES
 brew_install UPDATE
 
-export PATH="/usr/local/opt/make/libexec/gnubin:/usr/local/opt/grep/libexec/gnubin:/usr/local/opt/gnu-tar/libexec/gnubin:/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/opt/gnu-indent/libexec/gnubin:/usr/local/opt/ed/libexec/gnubin:/usr/local/opt/ruby/bin:/usr/local/opt/coretils/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/make/libexec/gnubin:/usr/local/opt/grep/libexec/gnubin:/usr/local/opt/gnu-tar/libexec/gnubin:/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/opt/gnu-indent/libexec/gnubin:/usr/local/opt/ed/libexec/gnubin:/usr/local/opt/ruby/bin:/usr/local/opt/coretils/libexec/gnubin:$PATH"
 cp /jarConfig/files/*policy.jar  /jarConfig/files/java.security $HOME/jre/lib/security
 cp /jarConfig/files/bcprov-jdk15on-160.jar $HOME/jre/lib/ext
-
-chown -R $3 /Users/$3/.bash_profile
+echo "export PATH=$PATH" >> /Users/sean/.bash_profile
+chown -R sean /Users/sean/.bash_profile
 
 rm -rf jarConfig
 
